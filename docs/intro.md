@@ -3,8 +3,12 @@ sidebar_position: 1
 title: Introduction
 ---
 
-# Intro
+# Introduction
 
-This help site will help you update the website with ease, its split up to handy single pages so you can get the instructions how to complete a task.
+This site will help you how to update and change different parts of the website. 
+
+Screenshot below is how the admin dashboard looks once you are logged in.
+
+For all tasks required you will use the sidebar on the left.
 
 <img src={require('@site/static/img/dashboard.jpg').default} />

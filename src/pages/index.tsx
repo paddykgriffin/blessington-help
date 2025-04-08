@@ -10,19 +10,12 @@ import Heading from "@theme/Heading";
 function Hero() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <div id="hero" className={clsx("bg-gray-200 py-12 text-black text-center")}>
+    <div id="hero" className={clsx("bg-gray-200 py-12 text-black text-center dark:bg-zinc-950")}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <Heading as="h1" className="text-secondary text-5xl dark:text-white">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle font-extralight">{siteConfig.tagline}</p>
-        {/* <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div> */}
+        <p className="text-2xl font-extralight dark:text-white">{siteConfig.tagline}</p>
       </div>
     </div>
   );

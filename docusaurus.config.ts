@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Blessington No.1 School',
-  tagline: 'Helpful information for the school website',
+  tagline: 'Helpful information for managing the website',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

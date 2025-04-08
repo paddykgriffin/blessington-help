@@ -192,3 +192,7 @@ html[data-theme='dark'] {
 .clean-btn {
   @apply text-white
 }
+
+.markdown img {
+  @apply border border-gray-200 dark:border-gray-700;
+}

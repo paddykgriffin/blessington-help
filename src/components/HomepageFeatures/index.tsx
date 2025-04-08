@@ -5,15 +5,18 @@ import Link from "@docusaurus/Link";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
+  icon: string;
   description: ReactNode;
   link?: ReactNode;
 };
 
+const styles = "button button--secondary button--lg bg-secondary text-white hover:bg-primary dark:border-slate-700 dark:bg-primary dark:hover:bg-secondary";
+
+
 const FeatureList: FeatureItem[] = [
   {
-    title: "Add a News Article",
-    Svg: require("@site/static/icons/icon-news.svg").default,
+    title: "Add a Page or News",
+    icon: require("@site/static/img/icons/page-content.png").default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -21,82 +24,84 @@ const FeatureList: FeatureItem[] = [
         
       </>
     ),
-    link:  <Link className="button button--secondary button--lg bg-secondary text-white hover:bg-primary" to="/docs/basics/create-an-article">
+    link:  <Link className={styles} to="/docs/basics/pages">
     Learn more
   </Link>
   },
+
   {
-    title: "Add new Page",
-    Svg: require("@site/static/icons/icon-page.svg").default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-    link:  <Link className="button button--secondary button--lg bg-secondary text-white hover:bg-primary" to="/docs/basics/create-a-page">
-    Learn more
-  </Link>
-  },
-  {
-    title: "Add an Media (Image/Video)",
-    Svg: require("@site/static/icons/icon-image.svg").default,
+    title: "Update Polices",
+    icon: require("@site/static/img/icons/article.png").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
         be extended while reusing the same header and footer.
       </>
     ),
-    link:  <Link className="button button--secondary button--lg bg-secondary text-white hover:bg-primary" to="/docs/basics/add-image-video">
+    link:  <Link className={styles} to="/docs/basics/policies">
+    Learn more
+  </Link>
+  },
+  {
+    title: "Add an Media",
+    icon: require("@site/static/img/icons/media.png").default,
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+    link:  <Link className={styles} to="/docs/basics/media-library">
     Learn more
   </Link>
   },
 
   {
     title: "Add Image gallery",
-    Svg: require("@site/static/icons/icon-video.svg").default,
+    icon: require("@site/static/img/icons/image.png").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
         be extended while reusing the same header and footer.
       </>
     ),
-    link:  <Link className="button button--secondary button--lg bg-secondary text-white hover:bg-primary" to="/docs/basics/add-image-gallery">
+    link:  <Link className={styles} to="/docs/basics/image-gallery">
     Learn more
   </Link>
   },
   {
     title: "Change Site Settings",
-    Svg: require("@site/static/icons/icon-menu.svg").default,
+    icon:require("@site/static/img/icons/setting.png").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
         be extended while reusing the same header and footer.
       </>
     ),
-    link:  <Link className="button button--secondary button--lg bg-secondary text-white hover:bg-primary" to="/docs/advanced/site-settings">
+    link:  <Link className={styles} to="/docs/advanced/site-settings">
     Learn more
   </Link>
   },
   {
-    title: "Update Polices",
-    Svg: require("@site/static/icons/icon-news.svg").default,
+    title: "Update homepage",
+    icon: require("@site/static/img/icons/home.png").default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
         be extended while reusing the same header and footer.
       </>
     ),
-    link:  <Link className="button button--secondary button--lg bg-secondary text-white hover:bg-primary" to="/docs/basics/add-policy">
+    link:  <Link className={styles} to="/docs/basics/homepage">
     Learn more
   </Link>
   }
+ 
 ];
 
-function Feature({ title, Svg, description, link }: FeatureItem) {
+function Feature({ title, icon, description, link }: FeatureItem) {
   return (
-    <div className="text-center bg-gray-300 rounded-2xl shadow-xl p-4">
-      <Svg role="img" className="w-48 md:w-96 h-36 fill-slate-500" />
+    <div className="text-center bg-gray-100 rounded-2xl shadow-xl p-4 border-gray-200/50 border dark:bg-zinc-950 dark:border-zinc-700">
+     <img src={icon} className="m-0 w-32 py-6" />
         <Heading as="h3">{title}</Heading>
         <p className="hidden">{description}</p>
         {link}
